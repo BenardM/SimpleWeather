@@ -20,11 +20,10 @@ import java.util.Locale;
 
 public class RemoteData {
 
-
     private static final String OPEN_WEATHER_MAP_URL =
-            "http://api.openweathermap.org/data/2.5/weather?lat=%s&lon=%s&units=metric";
+            "http://api.openweathermap.org/data/2.5/weather?q=bordeaux,fr&units=metric";
 
-    private static final String OPEN_WEATHER_MAP_API = "====== YOUR OPEN WEATHER MAP API ======";
+    private static final String OPEN_WEATHER_MAP_API = "83af50b8918da9c022987e73b0eb58cc";
 
     public static String setWeatherIcon(int actualId, long sunrise, long sunset){
         int id = actualId / 100;
@@ -54,6 +53,7 @@ public class RemoteData {
         }
         return icon;
     }
+
 
 
 
@@ -97,7 +97,7 @@ public class RemoteData {
                     DateFormat df = DateFormat.getDateTimeInstance();
 
 
-                    String city = json.getString("name").toUpperCase(Locale.US) + ", " + json.getJSONObject("sys").getString("country");
+                    String city = json.getString("name") + ", " + json.getJSONObject("sys").getString("country");
                     String description = details.getString("description").toUpperCase(Locale.US);
                     String temperature = String.format("%.2f", main.getDouble("temp"))+ "°";
                     String humidity = main.getString("humidity") + "%";
@@ -154,8 +154,6 @@ public class RemoteData {
             return null;
         }
     }
-
-
 
 
 }
