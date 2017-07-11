@@ -4,6 +4,7 @@ package com.example.maximebenard.simpleweather;
  * Created by maximebenard on 06/06/2017.
  */
 
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.util.Log;
 
@@ -18,10 +19,12 @@ import java.text.DateFormat;
 import java.util.Date;
 import java.util.Locale;
 
-public class RemoteData {
+public class RemoteData extends City{
+
+
 
     private static final String OPEN_WEATHER_MAP_URL =
-            "http://api.openweathermap.org/data/2.5/weather?q=bordeaux,fr&units=metric";
+            "http://api.openweathermap.org/data/2.5/weather?q="+ City.getVille() +",fr&units=metric";
 
     private static final String OPEN_WEATHER_MAP_API = "83af50b8918da9c022987e73b0eb58cc";
 

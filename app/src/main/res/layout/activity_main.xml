@@ -82,18 +82,18 @@
         />
 
     <Button
-        android:text="Rafraichir"
+        android:text="Ville"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/refreshButton"
-        android:layout_above="@+id/weather_icon"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="41dp"
+        android:id="@+id/CityButton"
         style="@android:style/Widget.Material.Light.Button"
         android:fontFamily="sans-serif-medium"
         android:textColor="@color/colorPrimary"
         android:textAllCaps="false"
         android:backgroundTint="@color/colorAccent"
-        android:elevation="0dp" />
+        android:elevation="0dp"
+        android:layout_below="@+id/updated_field"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="58dp" />
 
 </RelativeLayout>
